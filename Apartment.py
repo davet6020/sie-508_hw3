@@ -13,7 +13,8 @@ class Apartment(Property):
         self.address = superproperty.address
 
     def initializeproperty(self):
-        print("Apartment.initializeproperty")
+        print("Has Balcony: {}".format(self.balcony))
+        print("Has Laundry: {}".format(self.laundry))
 
     def display(self):
         pass

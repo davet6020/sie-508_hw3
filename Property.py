@@ -8,7 +8,11 @@ class Property:
         self.address = address
 
     def initializeproperty(self):
-        print("Property.initializeproperty")
+        print("Address: {}".format(self.address))
+        print("Square Footage: {}".format(self.square_feet))
+        print("Number of Bedrooms: {}".format(self.num_bedrooms))
+        print("Number of Bathrooms: {}".format(self.num_bathrooms))
+        print("Rent: {}".format(self.rent))
 
     def display(self):
         pass

@@ -14,7 +14,9 @@ class House(Property):
         self.address = superproperty.address
 
     def initializeproperty(self):
-        print("House.initializeproperty")
+        print("Number of stories: {}".format(self.num_stories))
+        print("Has Garage: {}".format(self.garage))
+        print("Has Fenced in yard: {}".format(self.fenced_yard))
 
     def display(self):
         pass

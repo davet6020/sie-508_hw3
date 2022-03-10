@@ -1,9 +1,10 @@
 class RealEstateAgent:
-    agents = ['Jewel', 'Sue', 'Tom']
+    agents = []
 
     def __init__(self, name, properties):
         self.__name = name
         self.properties = properties
 
     def listproperties(self):
-        pass
+        print("Realtor: {}".format(self.properties.name))
+        print("Property: {}".format(self.properties.address))
