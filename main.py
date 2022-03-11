@@ -7,7 +7,7 @@ import random
 mls = {}
 property_count = 0
 
-# Instantiate two realtor obj
+# Instantiate two realtor objects
 agent1 = RealEstateAgent()
 agent2 = RealEstateAgent()
 
@@ -36,11 +36,14 @@ while property_count < 3:
         mls['property_type'] = 'House'
 
     # Time to assign property to realtor
-    agent1.addproperty(random.choice(RealEstateAgent.agents), property_count, mls['address'], mls['property_type'],
-                       mls['rent'])
+    if (property_count % 2) == 0:
+        agent1.addproperty('Jewel', property_count, mls['address'], mls['property_type'], mls['rent'])
+    else:
+        agent2.addproperty('Tom', property_count, mls['address'], mls['property_type'], mls['rent'])
 
     # Increment for next property
     property_count += 1
 
 # Print out a list of all agents properties
-agent2.listproperties()
+agent1.listproperties('Tom')
+agent2.listproperties('Jewel')

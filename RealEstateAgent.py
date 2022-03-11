@@ -10,12 +10,13 @@ class RealEstateAgent:
         self.rent = None
         self.none = None
 
-    def listproperties(self):
+    def listproperties(self, agent):
         self.none = None
-        print("Agent -\tRent -\tProperty Type -\tAddress")
+        print("Agent - Rent - Property Type - Address")
         for pid, pinfo in RealEstateAgent.property_list.items():
-            print("{: >10} {: >6} {: >15} {: >30}".format(pinfo['agent'], pinfo['rent'], pinfo['property_type'],
-                                                          pinfo['address']))
+            if pinfo['agent'] == agent:
+                print("{: <7} {: <6} {: <15} {: <30}".format(pinfo['agent'], pinfo['rent'], pinfo['property_type'],
+                                                             pinfo['address']))
 
     # Store the assigned values to this agents object
     def addproperty(self, agent, propertiid,  address, property_type, rent):
