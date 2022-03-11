@@ -10,6 +10,7 @@ class House(Property):
         self.fenced_yard = None
         self.initializeproperty()
 
+    # Ask user for input
     def initializeproperty(self):
         self.num_stories = int(input("How many stories is this house: "))
         self.garage = input("Does this house have a garage: ")
@@ -27,6 +28,7 @@ class House(Property):
         else:
             self.fenced_yard = "Yes"
 
+    # Print results of what is stored in this object
     def display(self):
         print("Number of stories: {}".format(self.num_stories))
         print("Has Garage: {}".format(self.garage))

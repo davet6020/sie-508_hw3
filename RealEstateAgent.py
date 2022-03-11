@@ -1,6 +1,5 @@
 class RealEstateAgent:
     agents = ['Jewel', 'Tom']
-    pr = {}
     property_list = {}
 
     def __init__(self):
@@ -18,6 +17,7 @@ class RealEstateAgent:
             print("{: >10} {: >6} {: >15} {: >30}".format(pinfo['agent'], pinfo['rent'], pinfo['property_type'],
                                                           pinfo['address']))
 
+    # Store the assigned values to this agents object
     def addproperty(self, agent, propertiid,  address, property_type, rent):
         self.agent = agent
         self.propertiid = propertiid
@@ -25,6 +25,7 @@ class RealEstateAgent:
         self.property_type = property_type
         self.rent = rent
 
+        # Put the property values onto the Agent object
         RealEstateAgent.pr = {'agent': self.agent, 'address': self.address,
                               'property_type': self.property_type, 'rent': self.rent}
         RealEstateAgent.property_list[self.propertiid] = RealEstateAgent.pr

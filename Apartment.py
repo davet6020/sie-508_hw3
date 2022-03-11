@@ -9,6 +9,7 @@ class Apartment(Property):
         self.laundry = None
         self.initializeproperty()
 
+    # Ask user for input
     def initializeproperty(self):
         self.balcony = input("Does this apartment have a balcony: ")
         self.laundry = input("Does this apartment have a laundry facility: ")
@@ -25,6 +26,7 @@ class Apartment(Property):
         else:
             self.laundry = "Yes"
 
+    # Print results of what is stored in this object
     def display(self):
         print("Has Balcony: {}".format(self.balcony))
         print("Has Laundry: {}".format(self.laundry))
