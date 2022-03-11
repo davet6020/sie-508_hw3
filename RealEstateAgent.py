@@ -1,10 +1,21 @@
 class RealEstateAgent:
-    agents = []
+    agents = ['Jewel', 'Tom']
+    property_list = []
 
-    def __init__(self, name, properties):
-        self.__name = name
-        self.properties = properties
+    def __init__(self):
+        self.properti = None
+        self.properti_number = None
+        self.agent = None
 
     def listproperties(self):
-        print("Realtor: {}".format(self.properties.name))
-        print("Property: {}".format(self.properties.address))
+        for a in RealEstateAgent.agents:
+            print("Realtor: {}".format(a))
+            print("Property: {}".format(self.properti))
+
+    def addproperty(self, agent, properti):
+        i = 0
+        self.agent = agent
+        self.properti = properti
+        RealEstateAgent.property_list['Jewel'][i][properti] = self.properti
+        print(RealEstateAgent.property_list['Jewel'])
+

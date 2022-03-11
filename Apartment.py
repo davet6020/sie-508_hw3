@@ -3,18 +3,28 @@ from Property import Property
 
 class Apartment(Property):
 
-    def __init__(self, superproperty, balcony, laundry):
-        self.balcony = balcony
-        self.laundry = laundry
-        self.square_feet = superproperty.square_feet
-        self.num_bedrooms = superproperty.num_bedrooms
-        self.num_bathrooms = superproperty.num_bathrooms
-        self.rent = superproperty.rent
-        self.address = superproperty.address
+    def __init__(self):
+        # super().__init__()
+        self.balcony = None
+        self.laundry = None
+        self.initializeproperty()
 
     def initializeproperty(self):
-        print("Has Balcony: {}".format(self.balcony))
-        print("Has Laundry: {}".format(self.laundry))
+        self.balcony = input("Does this apartment have a balcony: ")
+        self.laundry = input("Does this apartment have a laundry facility: ")
+
+        # Basic error checking to force the result into a No or Yes
+        if self.balcony.upper() == "N" or int(self.balcony == 0):
+            self.balcony = "No"
+        else:
+            self.balcony = "Yes"
+
+        # Basic error checking to force the result into a No or Yes
+        if self.laundry.upper() == "N" or int(self.laundry == 0):
+            self.laundry = "No"
+        else:
+            self.laundry = "Yes"
 
     def display(self):
-        pass
+        print("Has Balcony: {}".format(self.balcony))
+        print("Has Laundry: {}".format(self.laundry))
