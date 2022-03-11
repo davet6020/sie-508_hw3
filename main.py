@@ -27,8 +27,10 @@ rnam = "r"
 
 # Time to assign property to realtor
 r = RealEstateAgent()
+r.addproperty('Jewel', 'House 1')
+r.addproperty('Jewel', 'Apartment 1')
+r.addproperty('Tom', 'House 2')
 r.listproperties()
-r.addproperty('J', 'house 1')
 # realx[pnum] = RealEstateAgent(r1_name, propx[pnum])
 # realx[pnum].listproperties()
 
