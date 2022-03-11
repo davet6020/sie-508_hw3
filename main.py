@@ -1,3 +1,8 @@
+__author__ = "Silvia Nittel"
+__copyright__ = "Copyright 2022, SIE508, University of Maine"
+__credits__ = ["Richard Twiggs"]
+__what__ = "This is Homework Assignment 3"
+
 from RealEstateAgent import RealEstateAgent
 from Property import Property
 from House import House
